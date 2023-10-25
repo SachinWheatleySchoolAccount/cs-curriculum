@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Axe
   - Spikes
+  - HAMBUERGUER
+  - Burger
+  - Fireball
   layers:
   - Default
   - TransparentFX
