@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class PlayerBulletMovement : MonoBehaviour
 {
     public Vector2 bulletSpeed;
     public float timer = 0;
@@ -21,6 +20,6 @@ public class Projectile : MonoBehaviour
         if (timer >= 3)
         {
             Destroy(gameObject);
-        }
+        } 
     }
 }
