@@ -12,7 +12,7 @@ public class PlayerProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shotCooldown = 0.5f;
+        shotCooldown = 1.5f;
         timer = shotCooldown;
     }
 
@@ -25,7 +25,7 @@ public class PlayerProjectile : MonoBehaviour
             if (timer <= 0)
             {
                 timer = shotCooldown;
-                 bullet = Instantiate(this.bullet, transform.position, UnityEngine.Quaternion.identity);
+                bullet = Instantiate(this.bullet, transform.position, UnityEngine.Quaternion.identity);
                 bullet.bulletSpeed = (Vector2)((cursor.mousePosition - transform.position).normalized*10);
             }
         }
