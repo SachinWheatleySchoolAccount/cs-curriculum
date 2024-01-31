@@ -283,7 +283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 0
   cave: 0
+  rb: {fileID: 5564746796056154358}
   ySpeed: 0
+  jumpHeight: 0
 --- !u!114 &5498970807291319011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5829de9fe5654f38a434234eaa5590f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 0}
-  bullet: {fileID: 0}
+  cursor: {fileID: 8859275759931573723, guid: 09b7bb559312f4971bc9a9689309f975, type: 3}
+  bullet: {fileID: 3106941203864150516, guid: 9a3fbac1ea5e941f687c24548f84616f, type: 3}
   timer: 0
   shotCooldown: 0
