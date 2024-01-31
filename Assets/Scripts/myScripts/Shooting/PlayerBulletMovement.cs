@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +19,10 @@ public class PlayerBulletMovement : MonoBehaviour
     {
         timer += 1 * Time.deltaTime;
         transform.Translate(bulletSpeed * Time.deltaTime);
-        if (timer >= 1000)
-        {
-            Destroy(gameObject);
-        } 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Destroy(gameObject);
     }
 }

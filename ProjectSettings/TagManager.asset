@@ -11,6 +11,7 @@ TagManager:
   - HAMBUERGUER
   - Burger
   - Fireball
+  - Elite
   layers:
   - Default
   - TransparentFX

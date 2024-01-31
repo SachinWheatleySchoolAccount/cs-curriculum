@@ -9,12 +9,15 @@ using Random = UnityEngine.Random;
 public class EnemyDeath : MonoBehaviour
 {
     public bool dead;
-
+    public GameObject coins;
+    public GameObject health;
+    public GameObject axe;
     private int odds;
+    
     // Start is called before the first frame update
     void Start()
     {
-        odds = Random.Range(0, 10);
+        
     }
 
     // Update is called once per frame
@@ -22,26 +25,33 @@ public class EnemyDeath : MonoBehaviour
     {
         if (dead == true)
         {
-            if (odds <= 5)
+            odds = Random.Range(0, 10);
+            if (gameObject.CompareTag("Elite"))
             {
-                //Instantiate(coin)
+                Instantiate(axe, transform.position, Quaternion.identity);
+            }
+            if (odds <= 5 && gameObject.CompareTag("Enemy"))
+            {
+                Instantiate(coins, transform.position, Quaternion.identity);
             }
 
-            if (odds > 5 && odds <= 8)
+            if (odds > 5 && odds <= 8 && gameObject.CompareTag("Enemy"))
             {
-                //Instantiate(Burger)
+                Instantiate(health, transform.position, Quaternion.identity);
             }
 
-            if (odds > 8 && odds <= 9)
+            if (odds > 8 && odds <= 9 && gameObject.CompareTag("Enemy"))
             {
-                //Instantiate(coin x2)
+                Instantiate(coins, transform.position, Quaternion.identity);
+                Instantiate(coins, transform.position, Quaternion.identity);
             }
 
-            if (odds > 9)
+            if (odds > 9 && gameObject.CompareTag("Enemy"))
             {
-                //Instantiate(coin)
-                //Instantiate(burger)
+                Instantiate(coins, transform.position, Quaternion.identity);
+                Instantiate(health, transform.position, Quaternion.identity);
             }
+            Destroy(gameObject);
         }
     }
 

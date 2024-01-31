@@ -10,7 +10,7 @@ public class HUD : MonoBehaviour
     private static HUD gm;
     public int coins;
     public int health;
-    
+    public bool axe = false;
     void Awake()
     {
         if (gm != null && gm != this)

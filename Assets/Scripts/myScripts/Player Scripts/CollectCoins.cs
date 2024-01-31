@@ -29,6 +29,11 @@ public class CollectCoins : MonoBehaviour
             gm.coins += coinValue;
             Destroy(other.gameObject);
         }
-        
+
+        if (other.gameObject.CompareTag("Axe"))
+        {
+            gm.axe = true;
+            Destroy(other.gameObject);
+        }
     }
 }

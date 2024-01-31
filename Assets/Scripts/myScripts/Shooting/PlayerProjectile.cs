@@ -25,8 +25,9 @@ public class PlayerProjectile : MonoBehaviour
             if (timer <= 0)
             {
                 timer = shotCooldown;
-                bullet = Instantiate(this.bullet, transform.position, UnityEngine.Quaternion.identity);
-                bullet.bulletSpeed = (Vector2)((cursor.mousePosition - transform.position).normalized*10);
+                var position = transform.position;
+                bullet = Instantiate(this.bullet, position, UnityEngine.Quaternion.identity);
+                bullet.bulletSpeed = (Vector2)((cursor.mousePosition - position).normalized*10);
             }
         }
     }
